@@ -1,0 +1,310 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family:Arial;
+  }
+
+
+
+
+  #dropdown{
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-family: sans-serif;
+    background-color: #172f6b;
+    color: rgba(255, 255, 255, 0.719);
+  }
+  option{
+    font-family: sans-serif;
+
+  }
+.topnav{
+    z-index: 99;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+    max-height: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background-color:#38afff6c;
+    border-radius: 20px;
+
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color:#38afff;
+
+}
+*{
+    user-select: none;
+}
+
+.l{
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    gap: 5px;
+
+}
+.l:hover{
+    border: none;
+    background-color: #38afffe8;
+    transition: all ease-in-out .5s;
+    color: white;
+}
+.suggestion{
+    background-color: #3c7ca6d9;
+    
+}
+.sl{
+    transition: all ease-in-out .3s;
+    color: rgba(240, 248, 255, 0.714);
+
+}
+.sl:hover{
+    background-color: #38afffb7;
+    color: white;
+}
+.sl:hover img{
+    opacity: 1;
+    scale: 1.2;
+    transition: scale ease-in-out .4s;
+    
+}
+.tl{
+   transition: scale ease .5s;
+
+}
+
+.tl:hover{
+   scale: 1.2;
+   transition: scale ease .5s;
+   color: white;
+}
+.cl{
+    transform: translate(-50%,-50%);
+    left: 50%;
+}
+.card{
+   transition: scale ease .3s;
+   
+}
+.card:hover{
+    scale: 1.07;
+   transition: scale ease .3s;
+   background-color: #172f6b;
+
+}
+.watch{
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    background-color: #212e4da9;
+}
+
+
+
+@media (max-width:600px) {
+    .app{
+        flex-direction: column;
+    }
+     .sidenav{
+        border: none;
+        height: fit-content;
+     }
+    
+   
+    .logo{
+        margin-top: 6px;
+    }
+
+    .l{
+        border-radius: 10px;
+        background:#2baafed6;
+        color: rgba(255, 255, 255, 0.804);
+        gap: 2px;
+        padding: 5px;
+        font-size: 16px;
+    
+    }
+    .tr{
+        margin-left: 10vw;
+    }
+    .list{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 20px; 
+        margin-top: 50px;
+        align-items: center;
+    }
+    .list2{
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .new_feeds, .info{
+        display: none;
+        
+    }
+    hr{
+        display: none;
+    }
+    
+    .responsive{
+        width: 100%;
+    }
+   .wall{
+    width: 100%;
+    height: fit-content;
+   }
+   .topnav{
+    position: absolute;
+    top: 5%;
+    width: fit-content;
+    left: 7%;
+   }
+  
+   
+    .suggestion{
+        left: 7%;
+        margin-top: 10px;
+        opacity: 1;
+        background-color: #1f6986dd;
+        border-radius: 20px;
+        color: wheat;
+        box-shadow: 0px 0px 8px 8px #0F172A inset;
+        font-size: 13px;
+    }
+    .suggestion img{
+        height: 45px;
+        opacity: 1;
+    }
+  
+   
+  
+   
+
+    .name{
+        font-size: 13px;
+        margin-bottom: 10px;
+        margin-top: 30%;
+    }
+   
+    .overview{
+        font-size: 13px;
+        width: 80%;
+        margin-top: 2%;
+    }
+    .wallinfo{
+        font-size: 12px;
+
+    }
+    .wallinfo i{
+        font-size: 20px;
+    }
+    .tl{
+       margin-top: 5%;
+     
+     }
+     .trend{
+        font-size: 25px;
+        
+     }
+     #dropdown{
+        font-size: 13px;
+        padding: 5px;
+     }
+     .gap{
+        width: 0px;
+     }
+     .trending{
+        padding-top: 10px;
+        background-color: #0F172A;
+
+    }
+    .fixedd{
+        position: fixed;
+        z-index: 99;
+        background-color: #0F172A;
+        height: 120px;
+        align-items: end;
+        justify-content: space-between;
+        padding-bottom: 10px;
+        margin-top: -10px;
+
+
+
+    }
+    .infinite{
+        width: 100vw;
+        position: absolute;
+        padding: 1px;
+        padding-top: 20px;
+        left: 0;
+      
+    }
+  
+    .cards{
+        width: 29.8vw;
+        height:60vw;
+        padding: 0;
+        padding-bottom: 2px;
+        gap: 0px;
+    }
+    .cards .name{
+        margin-bottom: 0;
+    }
+  
+    .mediatype , .lang , .date{
+        display: none;
+    }
+    .rate{
+        position: absolute;
+        background-color: #38afffcb;
+        padding: 2px;
+        border-radius: 20px;
+        font-size: 3vw;
+        right: 0;
+    }
+    .poster{
+        margin-bottom: 2px;
+        height: 90%;
+    }
+
+
+    /*moviedetails responsive*/
+
+   
+     .nav{
+        z-index: 99;
+        color: #ffffff; 
+        font-size: 25px;
+
+     }
+    .part_2{
+        margin-top: 10%;
+        flex-direction: column;
+    }
+    .mrate{
+        position: absolute;
+        top: 0;
+        padding: 10px;
+        color: white;
+        font-size: 18px;
+    }
+    .mrate i,span{
+        font-size: 20px;
+        margin-right: 0;
+    }
+    
+}
+
+
