@@ -10,7 +10,7 @@ import TvDetails from './Components/Partials/TvDetails'
 import PersonDetails from './Components/Partials/PersonDetails'
 import MoviesDetails from './Components/Partials/MoviesDetails'
 import Watch from './Components/Partials/Watch'
-import About from './Components/About'
+
 
 export default function App() {
   return (
@@ -20,9 +20,7 @@ export default function App() {
           <Route path='' element={<Home/>}/>
           <Route path='/trendings' element={<Trending/>}/>
           <Route path='/populars' element={<Popular/>}/>
-          <Route path='/about' element={<About/>}/>
-
-          
+                    
           <Route path='/movie' element ={<Movies/>} />
           <Route path='/movie/details/:id' element={<MoviesDetails/>}>
               <Route path='/movie/details/:id/trailer' element={<Watch/>}/>

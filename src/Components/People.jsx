@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from '../utils/axios';
 import { Link, useNavigate } from 'react-router-dom'
 import Topnav from './Partials/Topnav';
+import noimage from '/noimage.webp'
 
 import Loading from './Partials/Loading';
 import InfiniteScroll from 'react-infinite-scroll-component'
