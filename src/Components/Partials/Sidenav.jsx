@@ -49,7 +49,7 @@ function  Sidenav() {
                <i className="ri-information-line"></i>
                 About
              </Link>
-             <Link className='l'>
+             <Link to='/contact' className='l'>
                <i className="ri-phone-line"></i>
                 Contact
              </Link>

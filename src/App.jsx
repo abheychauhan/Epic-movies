@@ -10,6 +10,8 @@ import TvDetails from './Components/Partials/TvDetails'
 import PersonDetails from './Components/Partials/PersonDetails'
 import MoviesDetails from './Components/Partials/MoviesDetails'
 import Watch from './Components/Partials/Watch'
+import About from './Components/About'
+import Contact from './Components/Contact'
 
 
 export default function App() {
@@ -33,6 +35,11 @@ export default function App() {
 
           <Route path='/person' element={ <People/>}/>
           <Route path='/person/details/:id' element={<PersonDetails/>}/>
+
+          <Route path='/about' element={ <About/>}/>
+          <Route path='/contact' element={ <Contact/>}/>
+
+
 
        </Routes>
     </div>
