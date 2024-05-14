@@ -70,8 +70,8 @@ const refresh =()=>{
 
 
         </div>
-        <div className='cards flex items-center justify-center '>
-        <InfiniteScroll className='infinite  pt-2  w-full h-screen bg-[#0F172A] px-10'
+        <div className='cards flex items-center justify-center pt-10 '>
+        <InfiniteScroll className='infinite pt-20  w-full h-screen bg-[#0F172A] px-10'
             dataLength={movie.length}
             next={GetMovie}
             hasMore={hasMore}
