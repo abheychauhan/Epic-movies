@@ -1,15 +1,17 @@
 import axios from '../../utils/axios';
-import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useRef, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import noimage from "/noimage.webp";
+import SearchDetail from './SearchDetail';
 
 
 
 function Topnav() {
 
 
-    const [query, setquery] = useState("")
-    const [searches, setsearches] = useState([])
+    const [query, setquery] = useState("");
+    const [searches, setsearches] = useState([]);
+    const linkRef = useRef(null);
 
     const GetSearches = async () => {
 
@@ -24,6 +26,23 @@ function Topnav() {
         
         }
     };
+
+    const Getdetails = (e) =>{
+      try {
+          if((e.nativeEvent.key == "Enter") && (searches.length > 0))
+            {
+              linkRef.current.click();
+            }
+            else{
+              console.log(e.nativeEvent.isTrusted)
+            }
+          } catch (error) {
+          
+          console.log("Error: ", error);
+          
+          }
+      
+    }
     
     useEffect(() =>{
         GetSearches();
@@ -38,11 +57,16 @@ function Topnav() {
   return (
 
     <div className='topnav w-full text-zinc-400 p-5 '>
+      <div className=''>
+      
+      <Link to={`/searchdetails`} ref={linkRef}  state={{data:searches}} ></Link>
+
+      </div>
 
         <div className='search w-fit-content  flex items-center  gap-2 m-auto relative'>
           <i className="ri-search-eye-line text-2xl"></i>
 
-          <input onChange={(e)=>setquery(e.target.value)} value={query} className='rounded-lg w-[90%] h-[12%] bg-transparent outline-none border-2 border-zinc-400 px-2 py-[4px]' type="text" placeholder='Search ' />
+          <input onKeyUp={(e)=>Getdetails(e)} onChange={(e)=>setquery(e.target.value)} value={query} className='rounded-lg w-[90%] h-[12%] bg-transparent outline-none border-2 border-zinc-400 px-2 py-[4px]' type="text" placeholder='Search ' />
            
           
            {query.length > 0 && <i onClick={()=>setquery("")} className="ri-close-circle-line text-2xl"></i>}
@@ -60,7 +84,7 @@ function Topnav() {
         </div>
         
 
-     
+    
         
 
     </div>

@@ -22,7 +22,7 @@ function Watch() {
                
             </h1>
       
-          {ytvideo.key ? <ReactPlayer height={'47vw'}  width={'70vw'}  url={`https://www.youtube.com/watch?v=${ytvideo.key}`}/> : <Notavailable/>}
+          {ytvideo.key ? <ReactPlayer height={'47vw'} controls  width={'70vw'}  url={`https://www.youtube.com/watch?v=${ytvideo.key}`}/> : <Notavailable/>}
     </div>
   )
 }

@@ -6,6 +6,8 @@ import axios from '../utils/axios'
 import Cards from './Partials/Cards'
 import Dropdown from './Partials/Dropdown'
 import Loading from './Partials/Loading'
+import AnimeLoader from './Partials/AnimeLoader'
+import Cursor from './Partials/Cursor'
 
 
 function Home() {
@@ -60,7 +62,8 @@ function Home() {
   return wallpaper && trending ? (
     <>
     
-    
+      <AnimeLoader/>
+      <Cursor/>
       <Sidenav/>
       <div className='responsive w-[85%] h-full overflow-auto overflow-x-hidden '>
       <Topnav/>

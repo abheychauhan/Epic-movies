@@ -12,6 +12,7 @@ import MoviesDetails from './Components/Partials/MoviesDetails'
 import Watch from './Components/Partials/Watch'
 import About from './Components/About'
 import Contact from './Components/Contact'
+import SearchDetail from './Components/Partials/SearchDetail'
 
 
 export default function App() {
@@ -22,6 +23,8 @@ export default function App() {
           <Route path='' element={<Home/>}/>
           <Route path='/trendings' element={<Trending/>}/>
           <Route path='/populars' element={<Popular/>}/>
+          <Route path='/searchdetails' element={<SearchDetail/>}/>
+
                     
           <Route path='/movie' element ={<Movies/>} />
           <Route path='/movie/details/:id' element={<MoviesDetails/>}>
