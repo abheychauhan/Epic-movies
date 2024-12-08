@@ -8,7 +8,6 @@ function Cursor() {
   useEffect(() => {
     const updatePosition = (event) => {
       setPosition({ x: event.clientX, y: event.clientY });
-    console.log(event)
 
     };
 
@@ -24,6 +23,7 @@ function Cursor() {
     <div className= {`fixed h-[25px] w-[25px] bg-white rounded-full border-[#0d67e4] border-[7px] z-[999] `} style={{
       left: `${Position.x}px`,
       top: `${Position.y}px`,
+      pointerEvents:'none'
     }} ></div>
   )
 }
