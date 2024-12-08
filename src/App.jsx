@@ -13,12 +13,16 @@ import Watch from './Components/Partials/Watch'
 import About from './Components/About'
 import Contact from './Components/Contact'
 import SearchDetail from './Components/Partials/SearchDetail'
+import Cursor from './Components/Partials/Cursor'
+import AnimeLoader from './Components/Partials/AnimeLoader'
 
 
 export default function App() {
   return (
     <div className='app w-screen h-screen bg-[#0F172A] flex justify-between'>
-       
+       <Cursor/>
+       <AnimeLoader/>
+
        <Routes>
           <Route path='' element={<Home/>}/>
           <Route path='/trendings' element={<Trending/>}/>

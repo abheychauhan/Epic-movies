@@ -1,6 +1,5 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
-import { Timeline } from 'gsap/gsap-core'
 import React from 'react'
 
 function AnimeLoader() {
@@ -55,7 +54,7 @@ tl.to('.load',{
 
   
   return (
-    <div className='load fixed top-0 left-0 z-[9] w-screen h-screen bg-[#0F172A]'>
+    <div className='load fixed top-0 left-0 z-[9999] w-screen h-screen bg-[#0F172A]'>
       <div className="content flex items-center text-white font-bold w-full justify-center p-10 h-full gap-2">
          <span className='h-fit a1 overflow-hidden block'><h1 className='text-2xl'> <i className=" text-[#2BA9FE] ri-movie-2-fill"></i> </h1></span>
          <span className='h-fit a2 block overflow-hidden'><h1 className='text-2xl'>Epic</h1></span>

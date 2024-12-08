@@ -62,7 +62,6 @@ function Home() {
   return wallpaper && trending ? (
     <>
     
-      <AnimeLoader/>
       <Cursor/>
       <Sidenav/>
       <div className='responsive w-[85%] h-full overflow-auto overflow-x-hidden '>
